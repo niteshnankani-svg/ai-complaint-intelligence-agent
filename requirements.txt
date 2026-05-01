@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+gradio
+transformers
+torch
+scikit-learn
+pandas
+crewai
+langchain-openai
+python-dotenv
+requests
+openpyxl
