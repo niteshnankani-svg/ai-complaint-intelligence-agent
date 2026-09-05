@@ -3,8 +3,11 @@ import pandas as pd
 RANDOM_STATE = 42
 
 # ---- Load Flipkart CSV ----
-# Update this path to where your file actually is
-df = pd.read_csv('/Users/apple/Downloads/flipkart_product.csv', encoding='latin-1')
+# Set FLIPKART_CSV_PATH to point at your local copy of the dataset,
+# or drop the file at data/flipkart_product.csv (default below).
+import os
+CSV_PATH = os.getenv('FLIPKART_CSV_PATH', 'data/flipkart_product.csv')
+df = pd.read_csv(CSV_PATH, encoding='latin-1')
 
 print(f"Raw rows: {len(df):,}")
 print(f"Columns: {df.columns.tolist()}")
